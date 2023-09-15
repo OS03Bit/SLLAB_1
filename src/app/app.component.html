@@ -1,0 +1,24 @@
+<!-- <div *ngIf = 'player.length>0'>Player list</div>
+<div *ngFor="let p of player">{{p}}</div>
+<p>{{message}}</p> -->
+<h1>List of activities: (One Way)</h1>
+<div *ngFor="let p of todolist">
+  <input type="checkbox" name="" id=""><span>{{p}}</span>
+</div>
+<h1>List of activities: (Two Way)</h1>
+<form>
+  <input [(ngModel)]="swimout" type="checkbox" name="name"> Swimming In Campus <br/>
+  <input [(ngModel)]="swimin" type="checkbox" name="name"> Swimming Out of Campus <br/>
+  <input [(ngModel)]="eat" type="checkbox" name="name"> Eat <br/>
+  <input [(ngModel)]="code" type="checkbox" name="name"> Code <br/>
+  <input [(ngModel)]="sleep" type="checkbox" name="name"> Sleep <br/>
+</form>
+<h1>List of activities: (Two Way Output)</h1>
+<li *ngIf='swimout'>Swimming In Campus</li>
+<li *ngIf='swimin'>Swimming Out of Campus</li>
+<li *ngIf='eat'>Eat</li>
+<li *ngIf='code'>Code</li>
+<li *ngIf='sleep'>Sleep</li>
+
+
+<router-outlet></router-outlet>
